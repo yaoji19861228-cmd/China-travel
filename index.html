@@ -13,14 +13,14 @@
   <meta property="og:title" content="Beijing First 24h Survival Kit">
   <meta property="og:description" content="One-to-one hotel setup, private NIO ES8 airport pickup, and the same Beijing local from first message to first day.">
   <meta property="og:url" content="https://yaoji19861228-cmd.github.io/China-travel/">
-  <meta property="og:image" content="https://yaoji19861228-cmd.github.io/China-travel/assets/nio-es8-share.jpg">
+  <meta property="og:image" content="https://yaoji19861228-cmd.github.io/China-travel/assets/beijing-cbd-share.jpg">
   <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="900">
-  <meta property="og:image:alt" content="Private NIO ES8 luxury electric SUV in Beijing">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Beijing CBD and the CCTV Headquarters at blue hour">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Beijing First 24h Survival Kit">
   <meta name="twitter:description" content="Practical, private arrival help in Beijing. One local, one clear plan, no handoff.">
-  <meta name="twitter:image" content="https://yaoji19861228-cmd.github.io/China-travel/assets/nio-es8-share.jpg">
+  <meta name="twitter:image" content="https://yaoji19861228-cmd.github.io/China-travel/assets/beijing-cbd-share.jpg">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -508,7 +508,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 20%;
+      object-position: 43% center;
       transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
     }
 
@@ -713,6 +713,8 @@
     }
 
     .section h2,
+    .beijing-gallery-heading h2,
+    .about-heading h2,
     .dark-section h2,
     .contact-panel h2 {
       margin: 0;
@@ -1019,30 +1021,123 @@
       font-size: 12px;
     }
 
-    .friend-promise {
-      margin-top: 70px;
-      padding-top: 42px;
-      display: grid;
-      grid-template-columns: minmax(250px, 0.45fr) minmax(0, 1fr);
-      gap: 52px;
-      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    .beijing-gallery-section {
+      padding: 0 22px 118px;
     }
 
-    .friend-promise h3 {
+    .beijing-gallery-inner {
+      width: min(var(--max), 100%);
+      margin: 0 auto;
+    }
+
+    .beijing-gallery-heading {
+      margin-bottom: 42px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.45fr);
+      gap: 48px;
+      align-items: end;
+    }
+
+    .beijing-gallery-grid {
+      padding: 12px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.38fr) minmax(300px, 0.62fr);
+      gap: 12px;
+      color: var(--white);
+      background: var(--ink);
+      box-shadow: var(--shadow);
+    }
+
+    .beijing-scene,
+    .beijing-scene-stack {
+      min-width: 0;
+    }
+
+    .beijing-scene {
+      position: relative;
+      min-height: 0;
       margin: 0;
+      overflow: hidden;
+      background: var(--ink-deep);
+    }
+
+    .beijing-scene-primary {
+      height: 620px;
+    }
+
+    .beijing-scene-stack {
+      height: 620px;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .beijing-scene img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .beijing-scene-primary img {
+      object-position: 52% center;
+    }
+
+    .beijing-scene-hutong img {
+      object-position: center 38%;
+    }
+
+    .beijing-scene:hover img {
+      transform: scale(1.035);
+    }
+
+    .beijing-scene::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 42%, rgba(11, 33, 31, 0.88));
+      pointer-events: none;
+    }
+
+    .beijing-scene figcaption {
+      position: absolute;
+      right: 22px;
+      bottom: 20px;
+      left: 22px;
+      z-index: 2;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 11px;
+      font-weight: 750;
+    }
+
+    .beijing-scene figcaption span {
+      display: block;
+      margin-bottom: 7px;
       color: var(--gold);
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .beijing-scene figcaption strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--white);
       font-family: var(--display);
-      font-size: 38px;
+      font-size: 32px;
       font-weight: 500;
       line-height: 1;
     }
 
-    .friend-promise blockquote {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.82);
-      font-family: var(--display);
-      font-size: 26px;
-      line-height: 1.45;
+    .beijing-scene-stack figcaption {
+      right: 15px;
+      bottom: 14px;
+      left: 15px;
+    }
+
+    .beijing-scene-stack figcaption strong {
+      font-size: 22px;
     }
 
     .addon-grid {
@@ -1360,6 +1455,120 @@
       font-size: 13px;
     }
 
+    .about-section {
+      padding: 0 22px 118px;
+    }
+
+    .about-inner {
+      width: min(var(--max), 100%);
+      margin: 0 auto;
+    }
+
+    .about-layout {
+      padding: 28px;
+      display: grid;
+      grid-template-columns: minmax(340px, 0.78fr) minmax(0, 1fr);
+      grid-template-areas:
+        "portrait heading"
+        "portrait copy";
+      column-gap: clamp(42px, 6vw, 82px);
+      border: 1px solid var(--line);
+      background: var(--paper-light);
+      box-shadow: 14px 14px 0 var(--paper-deep);
+    }
+
+    .about-heading {
+      grid-area: heading;
+      padding: 38px 36px 0 0;
+    }
+
+    .about-heading h2 {
+      max-width: 650px;
+      font-size: 62px;
+    }
+
+    .about-portrait {
+      position: relative;
+      grid-area: portrait;
+      min-height: 650px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--ink);
+      clip-path: polygon(0 0, 93% 0, 100% 7%, 100% 100%, 8% 100%, 0 92%);
+    }
+
+    .about-portrait::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 58%, rgba(11, 33, 31, 0.78));
+      pointer-events: none;
+    }
+
+    .about-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+
+    .about-portrait figcaption {
+      position: absolute;
+      right: 24px;
+      bottom: 22px;
+      left: 24px;
+      z-index: 2;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .about-copy {
+      grid-area: copy;
+      padding: 26px 50px 44px 0;
+      align-self: start;
+    }
+
+    .about-copy p {
+      max-width: 660px;
+      margin: 0;
+      color: var(--ink-soft);
+      font-family: var(--display);
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .about-copy p + p {
+      margin-top: 18px;
+    }
+
+    .about-principles {
+      margin: 30px 0 0;
+      padding: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .about-principles li {
+      padding: 7px 10px;
+      color: var(--red-dark);
+      border: 1px solid currentColor;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .about-copy .button {
+      margin-top: 26px;
+    }
+
     .faq-wrap {
       display: grid;
       grid-template-columns: minmax(280px, 0.55fr) minmax(0, 1fr);
@@ -1548,6 +1757,23 @@
       margin: 0;
     }
 
+    .photo-credits {
+      display: block;
+      margin-top: 12px;
+      color: rgba(255, 255, 255, 0.42);
+      font-size: 9px;
+      line-height: 1.7;
+    }
+
+    .photo-credits a {
+      color: rgba(255, 255, 255, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .photo-credits a:hover {
+      color: var(--white);
+    }
+
     .mobile-bar {
       position: fixed;
       right: 12px;
@@ -1660,14 +1886,14 @@
       }
 
       .section-heading,
+      .beijing-gallery-heading,
       .offer-grid,
       .faq-wrap,
       .contact-panel {
         grid-template-columns: 1fr;
       }
 
-      .communication-note,
-      .friend-promise {
+      .communication-note {
         grid-template-columns: 1fr;
       }
 
@@ -1675,8 +1901,49 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .section-heading {
+      .section-heading,
+      .beijing-gallery-heading {
         gap: 24px;
+      }
+
+      .beijing-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .beijing-scene-primary {
+        height: 490px;
+      }
+
+      .beijing-scene-stack {
+        height: 300px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: 300px;
+      }
+
+      .about-layout {
+        grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1fr);
+        column-gap: 42px;
+        padding: 22px;
+      }
+
+      .about-heading {
+        padding: 28px 18px 0 0;
+      }
+
+      .about-heading h2 {
+        font-size: 54px;
+      }
+
+      .about-portrait {
+        min-height: 590px;
+      }
+
+      .about-copy {
+        padding: 20px 18px 32px 0;
+      }
+
+      .about-copy p {
+        font-size: 18px;
       }
 
       .offer-price {
@@ -1859,6 +2126,8 @@
       }
 
       .section h2,
+      .beijing-gallery-heading h2,
+      .about-heading h2,
       .dark-section h2,
       .contact-panel h2 {
         font-size: 50px;
@@ -1897,13 +2166,64 @@
         box-shadow: 8px 8px 0 var(--paper-deep);
       }
 
-      .friend-promise {
-        margin-top: 54px;
-        gap: 24px;
+      .beijing-gallery-section {
+        padding: 0 14px 82px;
       }
 
-      .friend-promise blockquote {
-        font-size: 22px;
+      .beijing-gallery-heading {
+        margin-bottom: 30px;
+      }
+
+      .beijing-gallery-grid {
+        padding: 9px;
+        gap: 9px;
+      }
+
+      .beijing-scene-primary {
+        height: 360px;
+      }
+
+      .beijing-scene-stack {
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 300px);
+        gap: 9px;
+      }
+
+      .beijing-scene figcaption strong {
+        font-size: 25px;
+      }
+
+      .about-section {
+        padding: 0 14px 82px;
+      }
+
+      .about-layout {
+        padding: 0;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "heading"
+          "portrait"
+          "copy";
+        box-shadow: 8px 8px 0 var(--paper-deep);
+      }
+
+      .about-heading {
+        padding: 30px 22px 28px;
+      }
+
+      .about-portrait {
+        min-height: 0;
+        margin: 0 10px;
+        aspect-ratio: 4 / 5;
+      }
+
+      .about-copy {
+        padding: 30px 22px 36px;
+      }
+
+      .about-copy p {
+        font-size: 18px;
       }
 
       .offer-list {
@@ -2036,6 +2356,7 @@
           <a href="#session">The guidance</a>
           <a href="#services">Services</a>
           <a href="#how">How it works</a>
+          <a href="#about">Meet your local</a>
           <a class="nav-cta" href="https://wa.me/8618501361943?text=Hi%2C%20I%27m%20planning%20a%20trip%20to%20China%20and%20would%20like%20to%20check%20availability." target="_blank" rel="noopener">Check availability</a>
         </nav>
       </div>
@@ -2070,9 +2391,9 @@
             </div>
           </div>
 
-          <figure class="hero-visual" aria-label="Your personal Beijing local host" data-reveal>
+          <figure class="hero-visual" aria-label="Beijing CBD at blue hour" data-reveal>
             <div class="hero-photo">
-              <img src="assets/beijing-local-host.webp" alt="Your Beijing local host, who personally handles your service from first message to hotel setup" width="900" height="1125" fetchpriority="high">
+              <img src="assets/beijing-cbd-blue-hour.webp" alt="Beijing CBD at blue hour with the CCTV Headquarters, elevated traffic and city lights" width="2000" height="1333" fetchpriority="high" decoding="async">
             </div>
             <span class="passport-stamp" aria-hidden="true">First day<br>Beijing<br>Ready</span>
             <span class="city-label" aria-hidden="true">北京首日</span>
@@ -2154,6 +2475,35 @@
         </aside>
       </section>
 
+      <section class="beijing-gallery-section" aria-labelledby="beijing-gallery-title">
+        <div class="beijing-gallery-inner">
+          <header class="beijing-gallery-heading" data-reveal>
+            <div>
+              <div class="section-kicker">The city you came to experience</div>
+              <h2 id="beijing-gallery-title">Beijing, beyond the checklist.</h2>
+            </div>
+            <p class="section-intro">The practical setup is only the beginning. The goal is to give you enough confidence to notice the city itself—imperial rooftops, the Great Wall and the small streets where everyday Beijing lives.</p>
+          </header>
+
+          <div class="beijing-gallery-grid" aria-label="Scenes of Beijing">
+            <figure class="beijing-scene beijing-scene-primary" data-reveal>
+              <img src="assets/beijing-imperial-horizon.webp" alt="Traditional imperial rooftops and greenery across Beijing with the modern city skyline in the distance" width="1800" height="1091" loading="lazy" decoding="async">
+              <figcaption><span>Old city · new horizon</span><strong>Imperial Beijing</strong>Centuries of rooftops with a living capital beyond them.</figcaption>
+            </figure>
+            <div class="beijing-scene-stack">
+              <figure class="beijing-scene" data-reveal>
+                <img src="assets/beijing-great-wall-sunrise.webp" alt="The Great Wall winding over mountains near Beijing in warm morning light" width="1600" height="1067" loading="lazy" decoding="async">
+                <figcaption><span>Beyond the city</span><strong>The Great Wall</strong>A Beijing day that deserves room to breathe.</figcaption>
+              </figure>
+              <figure class="beijing-scene beijing-scene-hutong" data-reveal>
+                <img src="assets/beijing-hutong-life.webp" alt="A shaded Beijing hutong lane with courtyard walls, trees and everyday local traffic" width="933" height="1400" loading="lazy" decoding="async">
+                <figcaption><span>Everyday Beijing</span><strong>Hutong rhythm</strong>Shade trees, courtyard lanes and the city locals know.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="dark-section" aria-labelledby="offer-title">
         <div class="dark-inner">
           <div class="offer-grid">
@@ -2190,10 +2540,6 @@
             </div>
           </div>
 
-          <div class="friend-promise" data-reveal>
-            <h3>More than apps — your local friend in Beijing</h3>
-            <blockquote>“More than just teaching apps — I treat every guest like a friend. I'll share the real Beijing that locals experience every day, make sure your first days feel warm and easy, and help you truly experience and feel the real China the way locals do every day.”</blockquote>
-          </div>
         </div>
       </section>
 
@@ -2319,6 +2665,33 @@
         </div>
       </section>
 
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="about-inner">
+          <div class="about-layout">
+            <div class="about-heading" data-reveal>
+              <div class="section-kicker">Meet your Beijing local</div>
+              <h2 id="about-title">The person you message is the person who meets you.</h2>
+            </div>
+
+            <figure class="about-portrait" data-reveal>
+              <img src="assets/beijing-local-host.webp" alt="Your Beijing local contact, who personally prepares and delivers the service" width="900" height="1125" loading="lazy" decoding="async">
+              <figcaption>Your direct Beijing contact · no platform handoff</figcaption>
+            </figure>
+
+            <div class="about-copy" data-reveal>
+              <p>I'm a Beijing local who helps independent travellers feel comfortable with the practical side of arriving in China. We'll work with your own phone and itinerary, so the advice fits the places you're going, the way you travel and the questions you actually have.</p>
+              <p>More than teaching apps, I want your first days in Beijing to feel calm, personal and welcoming. I'll meet you myself, share the everyday Beijing locals know, and help you explore with confidence—without a fixed tour script or a handoff to someone else.</p>
+              <ul class="about-principles" aria-label="How I work">
+                <li>One-to-one</li>
+                <li>In person</li>
+                <li>Same local throughout</li>
+              </ul>
+              <a class="button button-primary" href="https://wa.me/8618501361943?text=Hi%2C%20I%27d%20like%20to%20talk%20with%20you%20about%20my%20Beijing%20arrival.%20My%20travel%20dates%20are%3A%20" target="_blank" rel="noopener">Message me about your Beijing arrival</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section" aria-labelledby="faq-title">
         <div class="faq-wrap">
           <aside class="faq-aside" data-reveal>
@@ -2373,7 +2746,9 @@
     <footer class="footer">
       <div class="footer-inner">
         <div><strong>Beijing First 24h Survival Kit</strong><span>Personal arrival help · 北京首日助手</span></div>
-        <p>Independent face-to-face China travel setup and optional local transport. Not visa service, private currency exchange or licensed scenic guiding. App availability, account verification and attraction information may change; route details and extra costs are confirmed before service. © <span id="year">2026</span>.</p>
+        <p>Independent face-to-face China travel setup and optional local transport. Not visa service, private currency exchange or licensed scenic guiding. App availability, account verification and attraction information may change; route details and extra costs are confirmed before service. © <span id="year">2026</span>.
+          <span class="photo-credits">Beijing photography: <a href="https://unsplash.com/photos/a-very-tall-building-in-the-middle-of-a-city-qQT7l54ERZM" target="_blank" rel="noopener">Christian Lue / Unsplash</a>, <a href="https://www.pexels.com/photo/aerial-view-of-beijing-s-ancient-architecture-and-skyline-37506200/" target="_blank" rel="noopener">Kaca Pic / Pexels</a>, <a href="https://www.pexels.com/photo/great-wall-of-china-3262994/" target="_blank" rel="noopener">Boris Ulzibat / Pexels</a> and <a href="https://www.pexels.com/photo/charming-hutong-street-in-beijing-china-34939602/" target="_blank" rel="noopener">Bruna Santos / Pexels</a>.</span>
+        </p>
       </div>
     </footer>
 
